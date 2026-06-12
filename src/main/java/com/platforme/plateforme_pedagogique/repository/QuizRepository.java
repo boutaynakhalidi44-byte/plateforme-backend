@@ -1,0 +1,12 @@
+package com.platforme.plateforme_pedagogique.repository;
+
+import com.platforme.plateforme_pedagogique.entity.*;
+import org.springframework.data.jpa.repository.JpaRepository;
+import java.util.Optional;
+
+public interface QuizRepository
+        extends JpaRepository<Quiz, Long> {
+
+    Optional<Quiz> findByChapitreId(Long chapitreId);
+}
+
